@@ -17,7 +17,7 @@ cargo build --release
 ./target/release/rust-api
 ```
 
-Axum is defined in ```Cargo.toml``` and it will be downloaded automatically.
+Axum will be downloaded automatically.
 
 ### Clean Project Build
 
