@@ -1,4 +1,4 @@
-A "Hello World!" REST API demo using OpenJDK 17.0.3, Apache Maven 3.8.5 and Spring Boot 2.6.7 and .
+A "Hello World!" REST API demo using [OpenJDK](https://openjdk.java.net/) 17.0.3, [Apache Maven](https://maven.apache.org/) 3.8.5 and [Spring Boot](https://spring.io/projects/spring-boot) 2.6.7.
 
 ### Install OpenJDK and Maven
 
