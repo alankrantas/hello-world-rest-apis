@@ -1,4 +1,4 @@
-A "Hello World!" REST API demo using [Python](https://www.python.org/) 3.9.11 and [Flask](https://flask.palletsprojects.com/en/2.1.x/) 2.1.2.
+A "Hello World!" REST API demo using [Python](https://www.python.org/) 3.10.4 and [Flask](https://flask.palletsprojects.com/en/2.1.x/) 2.1.2.
 
 ### Install Python
 
