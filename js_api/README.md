@@ -11,8 +11,6 @@ npm install
 npm prune
 ```
 
-This will download Express. Add ```sudo``` at the beginning if you are installing it globally in Linux.
-
 ### Run Project
 
 ```bash
