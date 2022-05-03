@@ -18,6 +18,15 @@ Add ```sudo``` at the beginning if you are installing it globally in Linux.
 flask run -h 0.0.0.0 -p 3000
 ```
 
+or
+
+
+```bash
+python3 app.py
+```
+
+(use ```python app.py``` on Windows)
+
 ### Run in Docker
 
 ```bash
