@@ -1,4 +1,4 @@
-FROM maven:3.8.5-openjdk-17-slim
+FROM maven:3.8.5-openjdk-18-slim
 
 RUN mkdir -p /usr/src/java_api
 WORKDIR /usr/src/java_api
