@@ -26,7 +26,7 @@ docker run -p 3002:3000 --rm js-api-docker
 
 The API would be at ```localhost:3002```.
 
-### Load Test Result (1 sec request delay)
+### K6 Load Test (1 sec request delay)
 
 CPU usage: ~3-6%
 
@@ -54,7 +54,7 @@ default ✓ [======================================] 100 VUs  01m41.2s/10m0s  10
      vus_max........................: 100    min=100     max=100
 ```
 
-### Test Result 2 (High Loading, 0.1 sec request delay))
+### K6 Load Test (High Loading, 0.1 sec request delay))
 
 CPU usage: ~25-40%
 
