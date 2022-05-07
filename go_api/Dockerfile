@@ -1,4 +1,4 @@
-FROM golang:1.18.1
+FROM golang:1.18.1-alpine3.15
 
 RUN mkdir -p /usr/src/go_api
 WORKDIR /usr/src/go_api
