@@ -1,4 +1,4 @@
-FROM node:16.15.0
+FROM node:16.15.0-alpine3.15
 
 RUN mkdir -p /usr/src/js_api
 WORKDIR /usr/src/js_api
