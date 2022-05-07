@@ -1,4 +1,4 @@
-FROM python:3.10.4
+FROM python:3.10.4-alpine3.15
 
 RUN mkdir -p /usr/src/python_api
 WORKDIR /usr/src/python_api
