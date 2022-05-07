@@ -64,7 +64,7 @@ default ✓ [======================================] 100 VUs  01m42.0s/10m0s  10
      vus_max........................: 100    min=100     max=100
 ```
 
-### Test Result 2 (High Loading, 0.1 sec request delay)
+### K6 Load Test (High Loading, 0.1 sec request delay)
 
 
 CPU usage: ~130%
