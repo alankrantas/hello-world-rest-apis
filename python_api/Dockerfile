@@ -5,7 +5,7 @@ WORKDIR /usr/src/python_api
 
 COPY ./ /usr/src/python_api
 
-RUN pip3 install flask
+RUN pip3 --no-cache-dir install flask
 
 EXPOSE 3000
 
