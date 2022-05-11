@@ -1,4 +1,4 @@
-A "Hello World!" REST API demo using [Golang](https://go.dev/) 1.18.1 and [Gin](https://github.com/gin-gonic/gin) 1.7.7.
+A "Hello World!" REST API demo using [Golang](https://go.dev/) 1.18.2 and [Gin](https://github.com/gin-gonic/gin) 1.7.7.
 
 ### Install Golang
 
