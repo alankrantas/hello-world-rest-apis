@@ -1,4 +1,4 @@
-A "Hello World!" REST API demo using [Python](https://www.python.org/) 3.10.4 and [Flask](https://flask.palletsprojects.com/en/2.1.x/) 2.1.2.
+A "Hello World!" REST API demo using [Python](https://www.python.org/) 3.10.4 and [Flask](https://flask.palletsprojects.com/en/2.1.x/) 2.1.2. One of the version use [uwsgi](https://uwsgi-docs.readthedocs.io/en/latest/) 2.0.19.1 in the container as server.
 
 ### Install Python
 
@@ -38,7 +38,7 @@ The API would be at ```localhost:3001```.
 
 ### Run in Docker (with uwsgi)
 
-This version will use a uwsgi server with 100 workers:
+This version will use uwsgi with 100 workers:
 
 ```bash
 docker build . -t py-api-docker -f Dockerfile-wsgi
