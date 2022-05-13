@@ -92,3 +92,61 @@ default ✓ [======================================] 100 VUs  00m32.8s/10m0s  10
      vus............................: 100    min=100      max=100
      vus_max........................: 100    min=100      max=100
 ```
+
+### K6 Load Test with uwsgi (1 sec request delay)
+
+CPU usage: ~15-30%
+
+MEM usage: ~330 MiB
+
+```
+running (01m41.6s), 000/100 VUs, 10000 complete and 0 interrupted iterations
+default ✓ [======================================] 100 VUs  01m41.6s/10m0s  10000/10000 shared iters    
+
+     data_received..................: 980 kB 9.6 kB/s
+     data_sent......................: 910 kB 9.0 kB/s
+     http_req_blocked...............: avg=534.06µs min=0s     med=499.5µs max=17.7ms  p(90)=1ms     p(95)=1.34ms
+     http_req_connecting............: avg=454.34µs min=0s     med=496.9µs max=15.71ms p(90)=919.1µs p(95)=1.05ms
+     http_req_duration..............: avg=10.34ms  min=1.99ms med=7.41ms  max=83.7ms  p(90)=19.5ms  p(95)=27.99ms
+       { expected_response:true }...: avg=10.34ms  min=1.99ms med=7.41ms  max=83.7ms  p(90)=19.5ms  p(95)=27.99ms
+     http_req_failed................: 0.00%  ✓ 0         ✗ 10000
+     http_req_receiving.............: avg=191.03µs min=0s     med=0s      max=7.54ms  p(90)=501µs   p(95)=546.9µs
+     http_req_sending...............: avg=98.17µs  min=0s     med=0s      max=15.86ms p(90)=494.8µs p(95)=500.7µs
+     http_req_tls_handshaking.......: avg=0s       min=0s     med=0s      max=0s      p(90)=0s      p(95)=0s
+     http_req_waiting...............: avg=10.05ms  min=1.89ms med=7ms     max=81.51ms p(90)=19.15ms p(95)=27.18ms
+     http_reqs......................: 10000  98.455112/s
+     iteration_duration.............: avg=1.01s    min=1s     med=1.01s   max=1.09s   p(90)=1.02s   p(95)=1.03s
+     iterations.....................: 10000  98.455112/s
+     vus............................: 100    min=100     max=100
+     vus_max........................: 100    min=100     max=100
+```
+
+### K6 Load Test with uwsgi (High Loading, 0.1 sec request delay)
+
+
+CPU usage: ~150-190%
+
+MEM usage: ~326 MiB
+
+```
+running (00m13.7s), 000/100 VUs, 10000 complete and 0 interrupted iterations
+default ✓ [======================================] 100 VUs  00m13.7s/10m0s  10000/10000 shared iters    
+
+     data_received..................: 980 kB 72 kB/s
+     data_sent......................: 910 kB 67 kB/s
+     http_req_blocked...............: avg=1.26ms   min=0s       med=500.9µs max=50.05ms  p(90)=2.5ms    p(95)=4.99ms
+     http_req_connecting............: avg=1.12ms   min=0s       med=500.1µs max=47.11ms  p(90)=2.41ms   p(95)=4.49ms
+     http_req_duration..............: avg=29.76ms  min=1.99ms   med=23.49ms max=169.37ms p(90)=58.74ms  p(95)=77.83ms
+       { expected_response:true }...: avg=29.76ms  min=1.99ms   med=23.49ms max=169.37ms p(90)=58.74ms  p(95)=77.83ms
+     http_req_failed................: 0.00%  ✓ 0          ✗ 10000
+     http_req_receiving.............: avg=722.75µs min=0s       med=349.3µs max=91.36ms  p(90)=1.2ms    p(95)=2.06ms
+     http_req_sending...............: avg=161.76µs min=0s       med=0s      max=33.38ms  p(90)=500.4µs  p(95)=538.05µs
+     http_req_tls_handshaking.......: avg=0s       min=0s       med=0s      max=0s       p(90)=0s       p(95)=0s
+     http_req_waiting...............: avg=28.87ms  min=1.68ms   med=22.94ms max=168.37ms p(90)=56.79ms  p(95)=75.42ms
+     http_reqs......................: 10000  730.538356/s
+     iteration_duration.............: avg=135.97ms min=103.09ms med=130.3ms max=274.78ms p(90)=167.77ms p(95)=186.65ms
+     iterations.....................: 10000  730.538356/s
+     vus............................: 100    min=100      max=100
+     vus_max........................: 100    min=100      max=100
+```
+
