@@ -36,6 +36,15 @@ docker run -p 3001:3000 --rm py-api-docker
 
 The API would be at ```localhost:3001```.
 
+### Run in Docker (with uwsgi)
+
+This version will use a uwsgi server with 100 workers:
+
+```bash
+docker build . -t py-api-docker -f Dockerfile-wsgi
+docker run -p 3001:3000 --rm py-api-docker
+```
+
 ### K6 Load Test (1 sec request delay)
 
 CPU usage: ~22%
