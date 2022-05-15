@@ -38,7 +38,7 @@ docker run -p 3000:3000 --rm py-no-wsgi-api-docker
 
 #### With uwsgi (1 sec delay)
 
-CPU: ~10-20% (~50% at the beginning)
+CPU: ~10-20%
 
 MEM: 656.8 MiB
 
