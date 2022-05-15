@@ -10,4 +10,4 @@ RUN pip3 --no-cache-dir install flask uwsgi
 
 EXPOSE 3000
 
-CMD uwsgi --socket 0.0.0.0:3000 --protocol=http --processes 100 -w wsgi:app
+CMD uwsgi --socket 0.0.0.0:3000 --protocol=http --processes 200 -w wsgi:app
