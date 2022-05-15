@@ -29,63 +29,7 @@ mvn clean
 
 ```bash
 docker build . -t java-api-docker -f Dockerfile
-docker run -p 3003:3000 --rm java-api-docker
+docker run -p 3000:3000 --rm java-api-docker
 ```
 
-The API would be at ```localhost:3003```.
-
-### K6 Load Test (1 sec request delay)
-
-CPU usage: ~5-30%
-
-MEM usage: ~315 MiB
-
-```
-running (01m41.9s), 000/100 VUs, 10000 complete and 0 interrupted iterations
-default ✓ [======================================] 100 VUs  01m41.9s/10m0s  10000/10000 shared iters
-
-     data_received..................: 1.5 MB 15 kB/s
-     data_sent......................: 910 kB 8.9 kB/s
-     http_req_blocked...............: avg=25.49µs  min=0s     med=0s     max=7.04ms   p(90)=0s       p(95)=0s
-     http_req_connecting............: avg=15.04µs  min=0s     med=0s     max=4.95ms   p(90)=0s       p(95)=0s
-     http_req_duration..............: avg=12.26ms  min=1.23ms med=9.21ms max=293.09ms p(90)=13.49ms  p(95)=16.18ms
-       { expected_response:true }...: avg=12.26ms  min=1.23ms med=9.21ms max=293.09ms p(90)=13.49ms  p(95)=16.18ms
-     http_req_failed................: 0.00%  ✓ 0         ✗ 10000
-     http_req_receiving.............: avg=104.74µs min=0s     med=0s     max=17.83ms  p(90)=318.09µs p(95)=501.1µs
-     http_req_sending...............: avg=43.46µs  min=0s     med=0s     max=8.88ms   p(90)=0s       p(95)=0s
-     http_req_tls_handshaking.......: avg=0s       min=0s     med=0s     max=0s       p(90)=0s       p(95)=0s
-     http_req_waiting...............: avg=12.11ms  min=1.23ms med=9.11ms max=289.8ms  p(90)=13.4ms   p(95)=15.94ms
-     http_reqs......................: 10000  98.093249/s
-     iteration_duration.............: avg=1.01s    min=1s     med=1.01s  max=1.3s     p(90)=1.02s    p(95)=1.02s
-     iterations.....................: 10000  98.093249/s
-     vus............................: 100    min=100     max=100
-     vus_max........................: 100    min=100     max=100
-```
-
-### K6 Load Test (High Loading, 0.1 sec request delay))
-
-CPU usage: ~50-250%
-
-MEM usage: ~242 MiB
-
-```
-running (00m11.8s), 000/100 VUs, 10000 complete and 0 interrupted iterations
-default ✓ [======================================] 100 VUs  00m11.8s/10m0s  10000/10000 shared iters
-
-     data_received..................: 1.5 MB 128 kB/s
-     data_sent......................: 910 kB 77 kB/s
-     http_req_blocked...............: avg=65.61µs  min=0s       med=0s       max=46.21ms  p(90)=0s       p(95)=0s
-     http_req_connecting............: avg=47.15µs  min=0s       med=0s       max=46.21ms  p(90)=0s       p(95)=0s
-     http_req_duration..............: avg=11.02ms  min=1.24ms   med=7.67ms   max=300.18ms p(90)=14.02ms  p(95)=16.99ms
-       { expected_response:true }...: avg=11.02ms  min=1.24ms   med=7.67ms   max=300.18ms p(90)=14.02ms  p(95)=16.99ms
-     http_req_failed................: 0.00%  ✓ 0          ✗ 10000
-     http_req_receiving.............: avg=112.97µs min=0s       med=0s       max=16.79ms  p(90)=392.74µs p(95)=501.9µs
-     http_req_sending...............: avg=69.99µs  min=0s       med=0s       max=43.41ms  p(90)=0s       p(95)=67.94µs
-     http_req_tls_handshaking.......: avg=0s       min=0s       med=0s       max=0s       p(90)=0s       p(95)=0s
-     http_req_waiting...............: avg=10.84ms  min=1.24ms   med=7.53ms   max=299.78ms p(90)=13.83ms  p(95)=16.69ms
-     http_reqs......................: 10000  848.079902/s
-     iteration_duration.............: avg=117.06ms min=101.58ms med=110.38ms max=406.51ms p(90)=124.68ms p(95)=125.6ms
-     iterations.....................: 10000  848.079902/s
-     vus............................: 100    min=100      max=100
-     vus_max........................: 100    min=100      max=100
-```
+The API would be at ```localhost:3000```.
