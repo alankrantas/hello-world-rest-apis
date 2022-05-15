@@ -8,7 +8,7 @@ export const options = {
 
 // k6 main function
 export default function () {
-    const port = 3005
+    const port = 3000
     http.get(`http://localhost:${port}?name=${makeid()}`);  // send GET request with a name parameter
     sleep(1);  // wait 1 sec between requests
 }
