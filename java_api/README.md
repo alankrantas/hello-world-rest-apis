@@ -33,3 +33,65 @@ docker run -p 3000:3000 --rm java-api-docker
 ```
 
 The API would be at ```localhost:3000```.
+
+### K6 Load Test
+
+#### 1 sec delay
+
+CPU: ~5-30%
+
+MEM: 155.3 MiB
+
+```
+running (01m41.9s), 000/100 VUs, 10000 complete and 0 interrupted iterations
+default ✓ [ 100% ] 100 VUs  01m41.9s/10m0s  10000/10000 shared iters
+
+     data_received..................: 1.5 MB 15 kB/ 
+     data_sent......................: 910 kB 8.9 kB/s
+     http_req_blocked...............: avg=33.95µs  min=0s     med=0s     max=6.58ms   p(90)=0s       p(95)=0s
+     http_req_connecting............: avg=21.84µs  min=0s     med=0s     max=6.58ms   p(90)=0s       p(95)=0s
+     http_req_duration..............: avg=12.89ms  min=1.47ms med=8.78ms max=354.29ms p(90)=15.33ms  p(95)=18.96ms
+       { expected_response:true }...: avg=12.89ms  min=1.47ms med=8.78ms max=354.29ms p(90)=15.33ms  p(95)=18.96ms
+     http_req_failed................: 0.00%  ✓ 0    
+     ✗ 10000
+     http_req_receiving.............: avg=142.43µs min=0s     med=0s     max=21.88ms  p(90)=413.91µs p(95)=509µs
+     http_req_sending...............: avg=38.85µs  min=0s     med=0s     max=14.04ms  p(90)=0s       p(95)=74.17µs
+     http_req_tls_handshaking.......: avg=0s       min=0s     med=0s     max=0s       p(90)=0s       p(95)=0s
+     http_req_waiting...............: avg=12.71ms  min=1.47ms med=8.72ms max=353.88ms p(90)=14.99ms  p(95)=18.62ms
+     http_reqs......................: 10000  98.154016/s
+     iteration_duration.............: avg=1.01s    min=1s     med=1.01s  max=1.36s    p(90)=1.02s    p(95)=1.02s
+     iterations.....................: 10000  98.154016/s
+     vus............................: 100    min=100
+     max=100
+     vus_max........................: 100    min=100     max=100
+```
+
+#### 0.1 sec delay
+
+CPU: ~15-30%
+
+MEM: 155.1 MiB
+
+```
+running (00m11.1s), 000/100 VUs, 10000 complete and 0 interrupted iterations
+default ✓ [ 100% ] 100 VUs  00m11.1s/10m0s  10000/10000 shared iters
+
+     data_received..................: 1.5 MB 136 kB/s
+     data_sent......................: 910 kB 82 kB/ 
+     http_req_blocked...............: avg=46.57µs min=0s       med=0s      max=6.78ms   p(90)=0s       p(95)=0s
+     http_req_connecting............: avg=33.41µs min=0s       med=0s      max=6.78ms   p(90)=0s       p(95)=0s
+     http_req_duration..............: avg=6.38ms  min=930.5µs  med=5.33ms  max=36.33ms  p(90)=10.29ms  p(95)=12.69ms
+       { expected_response:true }...: avg=6.38ms  min=930.5µs  med=5.33ms  max=36.33ms  p(90)=10.29ms  p(95)=12.69ms
+     http_req_failed................: 0.00%  ✓ 0    
+      ✗ 10000
+     http_req_receiving.............: avg=63.12µs min=0s       med=0s      max=6.8ms    p(90)=107.44µs p(95)=499.1µs
+     http_req_sending...............: avg=35.37µs min=0s       med=0s      max=11.64ms  p(90)=0s       p(95)=77.73µs
+     http_req_tls_handshaking.......: avg=0s      min=0s       med=0s      max=0s       p(90)=0s       p(95)=0s
+     http_req_waiting...............: avg=6.28ms  min=878.8µs  med=5.29ms  max=36.33ms  p(90)=10.11ms  p(95)=12.18ms
+     http_reqs......................: 10000  897.100645/s
+     iteration_duration.............: avg=111.2ms min=102.25ms med=109.1ms max=154.28ms p(90)=122.37ms p(95)=124.3ms
+     iterations.....................: 10000  897.100645/s
+     vus............................: 100    min=100
+      max=100
+     vus_max........................: 100    min=100      max=100
+```
