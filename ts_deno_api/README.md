@@ -10,7 +10,7 @@ See https://github.com/denoland/deno_install. (You can use scoop: https://scoop.
 deno run --allow-net --allow-read --allow-env app.ts
 ```
 
-You can run ```deno cache app.ts``` first to cache dependencies.
+You can run ```deno cache app.ts``` to download dependencies first.
 
 ### Run in Docker
 
