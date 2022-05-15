@@ -5,7 +5,7 @@ Install K6 (see https://k6.io/docs/getting-started/installation/). You need to s
 Then run
 
 ```bash
-k6 run k6_load_test.js
+k6 run script.js
 ```
 
 Change the ```port``` to match the target container.
