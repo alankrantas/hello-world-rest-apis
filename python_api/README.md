@@ -18,7 +18,7 @@ Add ```sudo``` at the beginning if you are installing it globally in Linux.
 flask run -h 0.0.0.0 -p 3000
 ```
 
-### Run in Docker (with uwsgi, 200 workers)
+### Run in Docker (with WSGI, 200 workers)
 
 ```bash
 docker build . -t py-api-docker -f Dockerfile
@@ -27,9 +27,9 @@ docker run -p 3000:3000 --rm py-api-docker
 
 The API would be at ```localhost:3000```.
 
-### Run in Docker (no uwsgi)
+### Run in Docker (no WSGI)
 
 ```bash
-docker build . -t py-api-docker -f Dockerfile-no-wsgi
-docker run -p 3000:3000 --rm py-api-docker
+docker build . -t py-no-wsgi-api-docker -f Dockerfile-no-wsgi
+docker run -p 3000:3000 --rm py-no-wsgi-api-docker
 ```
