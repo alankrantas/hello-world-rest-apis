@@ -68,6 +68,7 @@ default ✓ [ 100% ] 100 VUs  01m41.5s/10m0s  10000/10000 shared iters
 #### With uwsgi (0.1 sec delay)
 
 CPU: ~150-200%
+
 MEM: 666.9 MiB
 
 ```
@@ -97,6 +98,7 @@ default ✓ [ 100% ] 100 VUs  00m11.4s/10m0s  10000/10000 shared iters
 #### No uwsgi (1 sec delay)
 
 CPU: ~20% (~30% at the beginning)
+
 MEM: 18.4 MiB
 
 ```
