@@ -39,6 +39,7 @@ docker run -p 3000:3000 --rm py-no-wsgi-api-docker
 #### With uwsgi (1 sec delay)
 
 CPU: ~10-20% (~50% at the beginning)
+
 MEM: 656.8 MiB
 
 ```
@@ -128,6 +129,7 @@ default ✓ [ 100% ] 100 VUs  01m41.7s/10m0s  10000/10000 shared iters
 #### No uwsgi (0.1 sec delay)
 
 CPU: ~110-120%
+
 MEM: 18.6 MiB
 
 ```
