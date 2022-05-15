@@ -11,5 +11,8 @@ app.get("/", async function (req, res) {
     res.status(200).json(msg);
 });
 
-console.log("JS REST service started...")
-app.listen(3000, "0.0.0.0");
+app.listen(
+    3000,
+    "0.0.0.0",
+    console.log("JS REST service started...")
+);
