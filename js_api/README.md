@@ -33,6 +33,7 @@ The API would be at ```localhost:3000```.
 #### 1 sec delay
 
 CPU: ~3-7%
+
 MEM: 51.4 MiB
 
 ```
@@ -62,6 +63,7 @@ default ✓ [ 100% ] 100 VUs  01m41.2s/10m0s  10000/10000 shared iters
 #### 0.1 sec delay
 
 CPU: ~25-40%
+
 MEM: 50.7 MiB
 
 ```
